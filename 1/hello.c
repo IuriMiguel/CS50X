@@ -1,6 +1,6 @@
 // get_string and printif com o placeholder incorreto 
 
-#include <cs50.h>
+#include <libcs50.h>
 #include <stdio.h>
 
 int main(void)
