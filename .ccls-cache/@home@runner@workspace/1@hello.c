@@ -1,8 +1,10 @@
-// um programa que diz olá para o mundo
+// get_string and printif com o placeholder incorreto 
 
+#include <cs50.h>
 #include <stdio.h>
 
 int main(void)
 {
-  printf("olá, mundo\n");
+  string resposta = get_string("Qual é o seu nome?\n");
+  printf("olá, %s\n");
 }
