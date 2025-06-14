@@ -17,7 +17,7 @@ int get_positive_int(void)
     int n;
     do
     {
-       int n = get_int("Number: ");
+       n = get_int("Number: ");
     }
     while (n < 1);
     return n;
