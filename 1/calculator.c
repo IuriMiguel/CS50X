@@ -6,10 +6,10 @@
 int main(void)
 {
     //prompt user for x
-    float x = get_int("x: ");
+    int x = get_int("x: ");
 
     //prompt user for y
-    float y = get_int("y: ");
+    int y = get_int("y: ");
 
     //add numbers
     int z = x + y;
