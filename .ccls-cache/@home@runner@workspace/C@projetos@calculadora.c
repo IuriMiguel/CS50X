@@ -16,27 +16,34 @@
 int main(void)
 {
   float resultado;
+  char op;
   //escolha do operador
   float x = get_float("primeiro número: ");
   float y = get_float("segundo número: ");
   //escolha do operador
-  char operador = get_char("(+, -, *, /) \noperador: ");
-  if (operador == '+')
+  do
+    {
+      op = get_char("(+, -, *, /) \noperador: ");
+    }
+  while (op != '+' && op != '-' && op != '*' && op != '/');
+
+  //faça a operação 
+  if (op == '+')
   {
     resultado = x + y;
     printf("Resultado: %f", resultado);
   }
-  else if (operador == '-')
+  else if (op == '-')
     {
       resultado = x - y;
       printf("Resultado: %f", resultado);
     }
-  else if (operador == '*')
+  else if (op == '*')
   {
     resultado = x * y;
     printf("Resultado: %f", resultado);
   }
-  else if (operador == '/')
+  else if (op == '/')
   {
     resultado = x / y;
     printf("Resultado: %f", resultado);
