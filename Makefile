@@ -7,6 +7,13 @@ override CFLAGS += -g -Wno-everything -pthread -lm
 %: %.c
 	$(CC) $(CFLAGS) $< -lcs50 -o $@
 
+# Regra genérica para compilar arquivos C em subdiretórios
+%/%.o: %/%.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+%/%: %/%.c
+	$(CC) $(CFLAGS) $< -lcs50 -o $@
+
 main: main.c
 	$(CC) $(CFLAGS) main.c -o "$@"
 
