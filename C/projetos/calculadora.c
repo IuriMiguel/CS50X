@@ -24,6 +24,10 @@ int main(void)
   do
     {
       op = get_char("(+, -, *, /) \noperador: ");
+      if (op != '+' && op != '-' && op != '*' && op != '/')
+        {
+          printf("selecione um operador aceitável");
+        }
     }
   while (op != '+' && op != '-' && op != '*' && op != '/');
 
@@ -31,27 +35,22 @@ int main(void)
   if (op == '+')
   {
     resultado = x + y;
-    printf("Resultado: %f", resultado);
+    printf("Resultado: %.2f\n", resultado);
   }
   else if (op == '-')
     {
       resultado = x - y;
-      printf("Resultado: %f", resultado);
+      printf("Resultado: %.2f\n", resultado);
     }
   else if (op == '*')
   {
     resultado = x * y;
-    printf("Resultado: %f", resultado);
+    printf("Resultado: %.2f\n", resultado);
   }
   else if (op == '/')
   {
     resultado = x / y;
-    printf("Resultado: %f", resultado);
-  }
-  else
-  {
-    printf("selecione um operador aceitável.");
+    printf("Resultado: %.2f\n", resultado);
   }
   
-  return 0;
 }
