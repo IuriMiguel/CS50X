@@ -66,3 +66,19 @@ pattern = "**/*.{c,h}"
 
 [languages.c.languageServer]
 start = "ccls"
+
+[workflows]
+runButton = "Calculadora"
+
+[[workflows.workflow]]
+name = "Calculadora"
+author = 28571394
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "make C/projetos/calculadora"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "./C/projetos/calculadora"

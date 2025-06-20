@@ -52,4 +52,6 @@ int main(void)
   {
     printf("selecione um operador aceitável.");
   }
+  
+  return 0;
 }
