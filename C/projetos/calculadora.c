@@ -12,33 +12,37 @@
 4. crie uma função que execute uma operação de acordo com o operador e retorne o valor pela variável
 */
 
-int calculadora(char operador, float x, float y);
 
 int main(void)
 {
+  float resultado;
   //escolha do operador
-  do 
+  float x = get_float("primeiro número: ");
+  float y = get_float("segundo número: ");
+  //escolha do operador
+  char operador = get_char("(+, -, *, /) \noperador: ");
+  if (operador == '+')
+  {
+    resultado = x + y;
+    printf("Resultado: %f", resultado);
+  }
+  else if (operador == '-')
     {
-      char operador = get_char("(+, -, *, /)\nEscolha a operação: ");
+      resultado = x - y;
+      printf("Resultado: %f", resultado);
     }
-  while (operador != ("+" || "-" || "*" || "/");
-  
-  //escolha dos números 
-  /*float x = get_float("primeiro número: ");
-  float y = get_float("Segundo número: ");
-  float resposta = calculadora(operador, x, y);*/
+  else if (operador == '*')
+  {
+    resultado = x * y;
+    printf("Resultado: %f", resultado);
+  }
+  else if (operador == '/')
+  {
+    resultado = x / y;
+    printf("Resultado: %f", resultado);
+  }
+  else
+  {
+    printf("selecione um operador aceitável.");
+  }
 }
-
-/*
-  int calculadora(char operador, float x, float y)
-{
-  do
-    {
-      if (operador == +)
-      {
-        return (x+y);
-      }
-    }
-  while ()
-}
-*/
