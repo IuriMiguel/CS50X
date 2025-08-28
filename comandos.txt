@@ -1,0 +1,8 @@
+
+Lista de arquivos com recursos
+ls -R
+
+>Compilação
+1.c
+//clang arquivo.c -o arquivo -lcs50
+//na pasta onde está o Makefile de c: make PROGRAM=pasta/arquivo
